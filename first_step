@@ -1,0 +1,25 @@
+create a new repository on the command line
+
+echo "# curso_github" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/jorgeortizc05/curso_github.git
+git push -u origin master
+                
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/jorgeortizc05/curso_github.git
+git branch -M master
+git push -u origin master
+
+#Segun harvard
+-crear repositorio en github.com
+github.com/new
+-clonar repositorio
+git clone https://github.com/jorgeortizc05/curso_github.git
+-Para aniadir archivos o cambios usar "git add foo.py". Para aniadir todos "git add ."
+git add .
+-
