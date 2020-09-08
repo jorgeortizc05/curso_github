@@ -16,10 +16,56 @@ git branch -M master
 git push -u origin master
 
 #Segun harvard
--crear repositorio en github.com
+-crear repositorio en github.com. Se crear una carpeta .git que tiene todo lo necesario para repositorios
 github.com/new
 -clonar repositorio
 git clone https://github.com/jorgeortizc05/curso_github.git
 -Para aniadir archivos o cambios usar "git add foo.py". Para aniadir todos "git add ."
 git add .
--
+-Para ver el estado se usa
+git status
+-Despues de aniadir los archivos a actualizar vamos a realizar un commit.
+ Este commit realiza un seguimiento de historia para poder volver a la anterior version
+git commit -m "message"
+-Subir al repositorio
+git push --se te pedira que ingreses el usuario y contrasenia
+
+*Nota: para evitar poner git add se puede usar
+git commit -ma "message"
+
+--Si deseas actualizar tu proyecto en caso de que otra persona lo haya
+  modificado, se debe usar git pull
+git pull
+
+-Pero que pasa si dos personas trabaja con el mismo codigo?. En este caso existen
+  conflictos, tendras que corregirlos manualmente los conflictos. Esto se llama merge
+
+-para ver el historial de cambios usar
+git log --cada cambio tiene un commit id 
+commit 8ce18b1215aac3376aaf7db05cd6d30a21f30eea (HEAD -> master, origin/master)
+Author: jorgeortizc05 <47234672+jorgeortizc05@users.noreply.github.com> 
+Date:   Mon Sep 7 19:55:38 2020 -0500
+
+    add hello.html and first_step
+
+-Para regresar a un estado anterior usar
+git reset --hard idcommit
+
+-En un proyecto grande usar ramas para evitar problemas de codigo
+ Branching: permite trabajar en un repositorio varias veces. Para unir se debe realizar
+ un merge.
+git branch -ves que en ramas estas
+-crear una nueva rama
+git checkout -b nombreRama -se cambia a esa rama
+git branch
+
+-cambiar de ramas
+git checkout nombreRamaexistente
+
+-Merges: hace una fusion del proyecto. git lo hara automaticamente la fusion, pero puede
+ llegar casos de conflicto.
+Dirigete a la rama principal. En este caso hay dos:master y style. 
+ Nos dirigimos a master y ponemos
+git merge style --si hay conflictos, habra que revisarlos y corregirlos.
+ -en caso de que haya conflictos, corregirlos 
+git commit -am "fix merge conflicts" --recuerda que estamos en la rama principal
