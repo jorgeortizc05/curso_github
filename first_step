@@ -69,3 +69,8 @@ Dirigete a la rama principal. En este caso hay dos:master y style.
 git merge style --si hay conflictos, habra que revisarlos y corregirlos.
  -en caso de que haya conflictos, corregirlos 
 git commit -am "fix merge conflicts" --recuerda que estamos en la rama principal
+
+*Puedes craer una pagina web estatica en github
+github.com/new
+ponderosa.github.io
+-entrar en la pagina web de su repositorio, en settings esta la opcion de pagina web
